@@ -1,0 +1,39 @@
+<form action="/products/addProductF" enctype="multipart/form-data" method="POST">
+    <div class="form-group" style="width: 800px">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control">
+    </div>
+    <div class="form-group" style="width: 800px">
+        <label for="price">Price</label>
+        <input type="text" name="price" id="price" class="form-control">
+    </div>
+    <div class="form-group" style="width: 800px">
+        <label for="avatar">Image</label>
+        <input type="file" name="avatar" id="avatar" class="form-control">
+    </div>
+    <div class="form-group" style="width: 800px">
+        <label for="description" style="width: 800px">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10">
+        </textarea>
+    </div>
+    <div class="form-group" style="width: 800px">
+                <label for="supplier">Supplier</label>
+        <select name="supplier" id="" class="form-control">
+            {{#each suppliers}}
+            <option value="{{{_id}}}">{{{name}}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group" style="width: 800px">
+                <label for="category">Category</label>
+        <select name="category" id="" class="form-control">
+            {{#each categories}}
+            <option value="{{{_id}}}">{{{name}}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <input type="submit" class="btn btn-outline-success" name="submit" id="submit" value="Add new">
+    </div>
+</form>
